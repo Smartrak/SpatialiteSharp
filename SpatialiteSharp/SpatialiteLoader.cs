@@ -13,7 +13,6 @@ namespace SpatialiteSharp
 		private static readonly object Lock = new object();
 		
 		private static bool _haveSetPath;
-		private static string _spatialitePath;
 
 		/// <summary>
 		/// Loads mod_spatialite.dll on the given connection
@@ -25,15 +24,15 @@ namespace SpatialiteSharp
 				//Need to work out where the file is and add it to the path so it can load all the other dlls too
 				if (!_haveSetPath)
 				{
-					_spatialitePath = Path.Combine(Assembly.GetExecutingAssembly().Location, (Environment.Is64BitProcess ? "x64" : "x86"), "spatialite") + "/";
+					var spatialitePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), (Environment.Is64BitProcess ? "x64" : "x86"), "spatialite");
 					
-					Environment.SetEnvironmentVariable("PATH", Environment.GetEnvironmentVariable("PATH") + ";" + _spatialitePath);
+					Environment.SetEnvironmentVariable("PATH", Environment.GetEnvironmentVariable("PATH") + ";" + spatialitePath);
 
 					_haveSetPath = true;
 				}
 			}
 
-			conn.LoadExtension(Path.Combine(_spatialitePath, "mod_spatialite.dll"));
+			conn.LoadExtension("mod_spatialite.dll");
 		}
 	}
 }
