@@ -1,0 +1,7 @@
+Trash contentand lib dirs.
+Run a "Developer Command Prompt for VS2013"
+cd to this dir
+run build.bat
+
+Then when happy:
+..\.nuget\NuGet.exe push SpatialiteSharp.4.1.9.2.nupkg
