@@ -26,7 +26,7 @@ namespace SpatialiteSharp
 				{
 					var spatialitePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), (Environment.Is64BitProcess ? "x64" : "x86"), "spatialite");
 					
-					Environment.SetEnvironmentVariable("PATH", Environment.GetEnvironmentVariable("PATH") + ";" + spatialitePath);
+					Environment.SetEnvironmentVariable("PATH", spatialitePath + ";" + Environment.GetEnvironmentVariable("PATH"));
 
 					_haveSetPath = true;
 				}
