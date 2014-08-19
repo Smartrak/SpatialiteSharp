@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SpatialiteSharp</id>
-    <version>4.1.9.3</version>
+    <version>4.2.0.0</version>
     <authors>dave</authors>
     <owners>dave</owners>
     <projectUrl>https://github.com/Smartrak/SpatialiteSharp</projectUrl>

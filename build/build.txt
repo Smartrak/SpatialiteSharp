@@ -1,4 +1,4 @@
-Trash contentand lib dirs.
+Trash content and lib dirs.
 Run a "Developer Command Prompt for VS2013"
 cd to this dir
 run build.bat
