@@ -10,7 +10,7 @@
 param($installPath, $toolsPath, $package, $project)
 
 $platformNames = "x86", "x64"
-$fileNames = "libfreexl-1.dll", "libgcc_s_dw2-1.dll", "libgcc_s_seh_64-1.dll", "libgeos-3-4-2.dll", "libgeos_c-1.dll", "libiconv-2.dll", "liblzma-5.dll", "libproj-0.dll", "libstdc++-6.dll", "libstdc++_64-6.dll", "libxml2-2.dll", "mod_spatialite.dll", "zlib1.dll"
+$fileNames = "libfreexl-1.dll", "libgcc_s_dw2-1.dll", "libgcc_s_seh-1.dll", "libgeos.dll", "libgeos_c.dll", "libiconv-2.dll", "liblzma-5.dll", "libproj-13.dll", "libstdc++-6.dll", "libwinpthread-1.dll", "libxml2-2.dll", "mod_spatialite.dll", "zlib1.dll"
 $propertyName = "CopyToOutputDirectory"
 
 foreach($platformName in $platformNames) {

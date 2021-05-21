@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SpatialiteSharp</id>
-    <version>4.2.0.0</version>
+    <version>4.3.0.2</version>
     <authors>dave</authors>
     <owners>dave</owners>
     <projectUrl>https://github.com/Smartrak/SpatialiteSharp</projectUrl>
@@ -10,7 +10,7 @@
     <description>Adds Spatialite to System.Data.SQLite</description>
     <copyright>Copyright 2014</copyright>
     <dependencies>
-      <dependency id="System.Data.SQLite.Core" version="1.0.93.0" />
+      <dependency id="System.Data.SQLite.Core" version="1.0.113.7" />
     </dependencies>
   </metadata>
 </package>
